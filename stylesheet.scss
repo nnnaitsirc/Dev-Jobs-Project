@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8;
+  color: #19202D;
+  height: 100vh;
+}
+
+
+p {
+  font-size: 40px;
+}
+
+.container-header {
+  background-color: #5964e0;
+  border-radius: 0px 0px 0px 100px;
+  height: 162px;
+  background-image: url(./img.svg/bg-pattern-header.svg);
+  background-position: center;
+
+  .header-title {
+    display: flex;
+    width: 1096px;
+    justify-content: space-between;
+
+    svg {
+      justify-content: flex-start;
+    }
+
+    .logo-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 115px;
+      // height: 32px;
+      margin-bottom: 84px;
+      margin-top: 44px;
+
+      h1 {
+        color: white;
+      }
+    }
+
+    .empty {
+      display: flex;
+      flex: 2;
+    }
+
+    .theme-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 84px;
+      margin-top: 45px;
+      gap: 15px;
+
+      .toggle {
+        width: 48px;
+        height: 18px;
+        background-color: #FFF;
+        border-radius: 20px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .toggle::before {
+        position: absolute;
+        content: "";
+        width: 16px; 
+        height: 16px;
+        background-color: #5964e0;
+        border-radius: 8px;
+        margin: 1px;
+        transition: 0.2s;
+
+      }
+
+      input:checked + .toggle {
+        background-color: #121721;
+      }
+
+      input:checked + .toggle::before {
+        transform: translateX(30px);
+        animation-name: slide;
+      }
+
+      input {
+        display: none;
+      }
+
+      @keyframes slide {
+        0% {
+          width: 16px;
+          height: 16px;
+        }
+        50%{
+          margin: 5px;
+          width: 60px;
+          height: 14px;
+        }
+      }
+
+
+      .material-symbols-outlined {
+        color: white;
+      }
+    }
+  }
+}
+
+.centered-div {
+  display: flex;
+  justify-content: center;
+}
+
+.query-container {
+  display: flex;
+  height: 80px;
+  margin-top: -40px;
+  padding: 0 16px;
+  background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px #6e8098;
+  width: 1175px;
+
+  .filter1 {
+    display: flex;
+    align-items: center;
+    // width: 312px;
+    border-right: 1px solid #6e8098;
+    gap: 16px;
+    // padding-right: 62px;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+
+    input {
+      flex: 1;
+      outline: none;
+    }
+  }
+
+  .filter2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 169px;
+    border-right: 1px solid #6e8098;
+    gap: 16px;
+    flex-grow: 1;
+    // padding: 0 62px;
+
+    span {
+      color: #5964e0;
+    }
+
+    input {
+      outline: none;
+    }
+
+  }
+
+  .filter3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 62px;
+  }
+
+  #title,
+  #location {
+    border-style: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+  }
+
+  #checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  #full-time {
+    // width: 180px;
+    font-family: "Kumbh Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    // .darkmode-elements { 
+    //   background-color: #19202D;
+    //   color: white;
+    // }
+  }
+}
+
+//Generic class for buttons
+
+.search-button {
+  display: flex;
+  width: 123px;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    display: none;
+  }
+
+  button {
+    width: 123px;
+    height: 48px;
+    border-radius: 5px;
+    background: #5964e0;
+    color: #fff;
+    font-family: "Kumbh Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-style: none;
+
+    &:hover {
+      background-color: #939bf4;
+      cursor: pointer;
+    }
+  }
+}
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+
+  .modalBox {
+    display: grid;
+    justify-items: center;
+    // align-: center;
+    width: 327px;
+    height: 217px;
+    background-color:#FFF;
+    border-radius: 5px;
+  }
+    .mobile-filter2 {
+      border-bottom: 1px solid #6E8098;
+    }
+
+    .mobile-filter2, .mobile-filter3 {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      & p {
+        font-size: 16px;
+        margin-left: 24px;
+      }
+
+      span {
+        margin-left: 24px;
+      }
+
+      #mobile-location {
+        margin-left: 24px;
+        border-style: none;
+        outline-color: transparent;
+      }
+      #mobile-checkbox {
+        margin-left: 24px;
+        border-radius: 2px;
+        height: 24px;
+        width: 24px;
+      }
+
+      .material-symbols-outlined {
+        color: #5964e0;
+      }
+
+    }
+
+    button {
+      width: 279px;
+      background-color: #5964e0;
+      border-style: none;
+      width: 279px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 5px;
+      color: #FFF;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #939bf4;
+        cursor: pointer;
+    }
+       
+  }
+
+}
+
+
+
+.jobs-container {
+  display: flex;
+  flex-direction: column;
+  width: 1110px;
+  margin-top: 80px ;
+  // background-color: transparent;
+
+  .ads {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .job-ad {
+      display: flex;
+      flex-direction: column;
+      width: 320px; 
+      height: 228px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background-color: #fff;
+      justify-content: flex-start;
+      margin: 30px 20px;
+  
+      .company-logo { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      margin-top: -25px;
+      margin-left: 32px;
+      border-radius: 15px;
+      }
+  
+      .role-preview {
+        width: 286px;
+        height: 147px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        margin-left: 32px;
+        // margin-bottom: 32px;
+        cursor: pointer;
+      }
+  
+      .role-specs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: -16px;
+      }
+  
+      #time-listed,
+      #shift-type,
+      #employer {
+        color: #6e8098;
+        font-family: "Kumbh Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+  
+      #role {
+        // color: #19202d; //why does it override dark mode ?
+        font-family: "Kumbh Sans";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 0px;
+      }
+  
+      #job-location {
+        color: #5964e0;
+        font-family: "Kumbh Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0px;
+      }
+  
+      #employer {
+        margin-top: 16px;
+        margin-bottom: 44px;
+      }    
+    }
+    .darkmode-elements { 
+    background-color: #19202D;
+      color: white; //why do I have to add this here? 
+    }
+  }
+}
+
+.loadMoreButton {
+  display: flex;
+  width: 123px;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    display: none;
+  }
+
+  #load-jobs {
+    width: 123px;
+    height: 48px;
+    border-radius: 5px;
+    background: #5964e0;
+    color: #fff;
+    font-family: "Kumbh Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-style: none;
+    &:hover {
+      background-color: #939bf4;
+      cursor: pointer;
+    }
+  }
+
+
+  #resetFiltersButton {
+    display: none;
+    width: 123px;
+    height: 48px;
+    border-radius: 5px;
+    background: #5964e0;
+    color: #fff;
+    font-family: "Kumbh Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-style: none;
+
+    &:hover {
+      background-color: #939bf4;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media (max-width: 750px) {
+  .container-header {
+    border-bottom-left-radius: 0px;
+    width: 100%;
+    }
+  
+  .logo-text {
+    margin-left: 24px;
+  }
+
+  .theme-buttons {
+    margin-right: 24px;
+  }
+
+  .centered-div {
+    margin-bottom: 24px;
+  }
+
+  .query-container {
+    display: flex;
+    max-width: 327px;
+
+    .filter1 {
+      border: 0;
+
+      svg {
+        display: none;
+      }
+    }
+    .filter2 {
+      display: none;
+    }
+
+    .filter3{
+      display: none;
+    }
+
+    .search-button{
+      gap: 10px;
+    }
+    .search-button > button {
+      display: none;
+    }
+
+    .search-button > svg {
+      display: inherit;
+    }
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  .logo-text {
+    margin-left: 20px;
+  }
+
+  .theme-buttons {
+    margin-right: 20px;
+  }
+  
+  .query-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+  .darkmode{
+    background-color: #121721;
+    color: white;
+  }
+
+  .darkmode-elements { 
+    background-color: #121721;
+    color: white;
+  }

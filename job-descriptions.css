@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-div {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-text > h1 > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 730px;
+  min-height: 140px;
+  margin-top: -40px;
+  background-color: #fff;
+}
+.company-info .logoAndTitle {
+  display: flex;
+}
+.company-info .logoAndTitle .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  height: 140px;
+}
+.company-info .logoAndTitle .company-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+}
+.company-info .logoAndTitle .company-name a {
+  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
+}
+.company-info #company-site {
+  width: 147px;
+  height: 48px;
+  border-radius: 5px;
+  border-style: none;
+  color: #5964e0;
+  margin-right: 43px;
+  background-color: rgba(89, 100, 224, 0.1);
+}
+.company-info #company-site:hover {
+  background-color: #939bf4;
+  color: white;
+  cursor: pointer;
+}
+.company-info #company-site a {
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration: none;
+}
+.company-info .darkmode-elements {
+  background-color: #19202d;
+  color: white;
+}
+
+main .jobDescription {
+  max-width: 730px;
+  background-color: #fff;
+}
+main .jobDescription .job-spec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+main .jobDescription .job-spec .role-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  width: 100%;
+  margin-left: 43px;
+  margin-top: 43px;
+}
+main .jobDescription .job-spec .role-information #title {
+  font-family: "Kumbh Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+main .jobDescription .job-spec .role-information #location {
+  color: #5964e0;
+  font-family: "Kumbh Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+main .jobDescription .job-spec .role-information .posting-update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6e8098;
+  font-family: "Kumbh Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .jobDescription #apply {
+  width: 141px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #5964e0;
+  border-style: none;
+  margin-right: 43px;
+  margin-top: 53px;
+  cursor: pointer;
+}
+main .jobDescription #apply:hover {
+  background-color: #939bf4;
+}
+main .jobDescription #apply a {
+  color: #fff;
+  text-decoration: none;
+}
+main .jobDescription .job-intro {
+  display: flex;
+  justify-content: center;
+}
+main .jobDescription .job-requirements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .jobDescription .job-requirements .requirements {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 48px;
+  margin-top: 40px;
+}
+main .jobDescription .candidateSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .jobDescription .candidateSection .requirements {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 48px;
+  margin-top: 40px;
+}
+main .jobDescription .job-description-content {
+  color: #6e8098;
+  font-family: "Kumbh Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 40px 43px 0px 48px;
+}
+main .jobDescription .skills-area .skills-required {
+  color: #5964e0;
+  padding-bottom: 8px;
+}
+main .jobDescription .skills-area .skills-text {
+  color: #6e8098;
+}
+
+.container-footer {
+  display: flex;
+  background-color: #fff;
+  margin-top: 80px;
+  width: 100vw;
+}
+.container-footer .footer-job {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 730px;
+}
+.container-footer .footer-job .job-title {
+  justify-content: center;
+  align-items: center;
+}
+.container-footer .footer-job .job-title h1 {
+  color: #19202d;
+  font-family: "Kumbh Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.container-footer .footer-job .job-title p {
+  color: #6e8098;
+  font-family: "Kumbh Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.container-footer .footer-job .apply-button {
+  justify-content: center;
+  align-items: center;
+}
+.container-footer .footer-job .apply-button button {
+  width: 141px;
+  height: 48px;
+  border-radius: 5px;
+  background: #5964e0;
+  border-style: none;
+  cursor: pointer;
+}
+.container-footer .footer-job .apply-button button a {
+  color: #fff;
+  text-decoration: none;
+}
+.container-footer .footer-job .apply-button button:hover {
+  background-color: #939bf4;
+}
+
+@media (max-width: 780px) {
+  header {
+    margin-bottom: 30px;
+  }
+  .container-header {
+    border-bottom-left-radius: 0px;
+    width: 100%;
+    padding-left: 20px;
+  }
+  .theme-buttons {
+    padding-right: 20px;
+  }
+  .centered-div {
+    margin-bottom: 24px;
+  }
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 730px;
+  }
+  .company-info .logoAndTitle {
+    display: flex;
+    flex-direction: column;
+  }
+  .company-info .logoAndTitle .logo-text {
+    margin-left: 24px;
+    width: 30px;
+  }
+  .company-info .logo {
+    height: 30px;
+    width: 30px;
+  }
+  .company-info #company-site {
+    width: 279px;
+    height: 48px;
+    margin-bottom: -60px;
+    margin-left: 10px;
+  }
+  .jobDescription {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer-job {
+    max-width: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  .footer-job .job-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.darkmode {
+  background-color: #121721;
+  color: white;
+}
+
+.darkmode-elements {
+  background-color: #19202d;
+  color: white;
+}
+
+@media (min-width: 751px) {
+  .logo-text {
+    margin-left: 24px;
+  }
+  .theme-buttons {
+    margin-right: 24px;
+  }
+}/*# sourceMappingURL=job-descriptions.css.map */
